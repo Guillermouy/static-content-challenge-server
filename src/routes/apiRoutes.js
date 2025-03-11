@@ -1,11 +1,8 @@
 const express = require("express");
-const routesService = require("../services/routesService");
+const getRoutes = require("../controllers/routesController");
 
 const router = express.Router();
 
-router.get("/routes", (req, res) => {
-  const routes = routesService.getAllRoutes();
-  res.json({ routes });
-});
+router.get("/routes", getRoutes);
 
 module.exports = router;

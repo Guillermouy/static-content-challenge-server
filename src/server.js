@@ -5,6 +5,7 @@ const cors = require("cors");
 const contentRoutes = require("./routes/contentRoutes");
 const apiRoutes = require("./routes/apiRoutes");
 const { PORT, CONTENT_PATH, PUBLIC_PATH } = require("./config");
+const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.static(PUBLIC_PATH));
 
 app.use("/api", apiRoutes);
 app.use("/", contentRoutes);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
