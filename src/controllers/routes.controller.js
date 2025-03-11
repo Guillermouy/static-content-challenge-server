@@ -1,4 +1,4 @@
-const routesService = require("../services/routesService");
+const routesService = require("../services/routes.service");
 
 /**
  * Gets all available routes

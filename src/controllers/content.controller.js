@@ -1,4 +1,4 @@
-const contentService = require("../services/contentService");
+const contentService = require("../services/content.service");
 
 /**
  * Controller to handle content requests

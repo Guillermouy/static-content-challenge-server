@@ -3,8 +3,8 @@ const path = require("path");
 const helmet = require("helmet");
 const cors = require("cors");
 const { swaggerUi, swaggerDocs } = require("./config/swagger");
-const contentRoutes = require("./routes/contentRoutes");
-const apiRoutes = require("./routes/apiRoutes");
+const contentRoutes = require("./routes/content.routes");
+const apiRoutes = require("./routes/api.routes");
 const { PORT, CONTENT_PATH, PUBLIC_PATH } = require("./config");
 const errorHandler = require("./middleware/errorHandler");
 
