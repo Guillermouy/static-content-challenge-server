@@ -1,9 +1,7 @@
 const app = require("./app");
-const { PORT } = require("./config");
+const { PORT, APP_PUBLIC_URL } = require("./config");
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(
-    `API documentation available at http://localhost:${PORT}/api-docs`
-  );
+  console.log(`Server running on ${APP_PUBLIC_URL}`);
+  console.log(`API documentation available at ${APP_PUBLIC_URL}/api-docs`);
 });
