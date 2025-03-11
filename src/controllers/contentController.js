@@ -1,6 +1,14 @@
 const contentService = require("../services/contentService");
 
-const getContent = async (req, res, next) => {
+/**
+ * Controller to handle content requests
+ * Processes the requested path and returns the corresponding HTML content
+ *
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
+const getContent = (req, res, next) => {
   try {
     let urlPath = req.path.substring(1);
 
