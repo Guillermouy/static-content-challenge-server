@@ -143,6 +143,23 @@ To add a new page:
 
 No code changes are required to add new pages.
 
+# Docker Setup for Static Content Challenge
+
+This project can be run using Docker.
+
+## Prerequisites
+
+- Docker installed on your machine
+- Docker Compose installed on your machine
+
+## Development
+
+To run the application in development mode:
+
+```bash
+docker-compose up
+```
+
 ## API
 
 ### Main Endpoints
