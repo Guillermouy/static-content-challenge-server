@@ -25,6 +25,7 @@ This application is a solution for the Static Content Challenge, a simple conten
 
 ### Project Structure
 
+```
 /
 ├── src/ # Source code
 │ ├── config/ # Application configuration
@@ -43,6 +44,7 @@ This application is a solution for the Static Content Challenge, a simple conten
 ├── .env.example # Example environment variables
 ├── package.json # Dependencies and scripts
 └── DOCUMENTATION.md # This file
+```
 
 ### Data Flow
 
@@ -118,6 +120,7 @@ Content is organized in folders within the `src/content/` directory. Each folder
 
 Example:
 
+```
 src/content/
 ├── about-page/
 │ └── index.md
@@ -128,6 +131,7 @@ src/content/
 │ │ └── index.md
 │ └── index.md
 └── index.md
+```
 
 ### Adding New Content
 
