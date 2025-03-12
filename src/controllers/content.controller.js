@@ -13,6 +13,10 @@ const getContent = (req, res, next) => {
     let urlPath = req.path.substring(1);
 
     if (!urlPath) {
+      const rootContent = contentService.getPageContent("");
+      if (rootContent) {
+        return res.send(rootContent);
+      }
       return res.redirect("/about-page");
     }
 

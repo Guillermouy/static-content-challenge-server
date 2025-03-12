@@ -4,6 +4,13 @@ const path = require("path");
 const exploreDirectoryForRoutes = (baseDir) => {
   const routes = [];
 
+  if (fs.existsSync(path.join(baseDir, "index.md"))) {
+    routes.push({
+      path: "/",
+      depth: 0,
+    });
+  }
+
   const exploreDirectory = (dir, basePath = "") => {
     const items = fs.readdirSync(dir);
 
