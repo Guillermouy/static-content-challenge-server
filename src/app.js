@@ -10,7 +10,16 @@ const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        frameAncestors: ["*"],
+      },
+    },
+  })
+);
+
 app.use(cors());
 app.use(express.static(CONTENT_PATH));
 app.use(express.static(PUBLIC_PATH));
