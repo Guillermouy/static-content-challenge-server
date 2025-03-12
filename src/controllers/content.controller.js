@@ -1,4 +1,5 @@
 const contentService = require("../services/content.service");
+const { NotFoundError, InternalServerError } = require("../utils/errors");
 
 /**
  * Controller to handle content requests
@@ -27,17 +28,7 @@ const getContent = (req, res, next) => {
     const fullHtml = contentService.getPageContent(urlPath);
 
     if (!fullHtml) {
-      let notFoundHtml = contentService.getPageContent("error/404");
-
-      if (!notFoundHtml) {
-        notFoundHtml = contentService.getPageContent("error");
-      }
-
-      if (notFoundHtml) {
-        return res.status(404).send(notFoundHtml);
-      }
-
-      return res.status(404).send("Page not found");
+      throw new NotFoundError("Page not found");
     }
 
     res.send(fullHtml);
