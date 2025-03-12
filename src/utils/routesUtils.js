@@ -15,6 +15,10 @@ const exploreDirectoryForRoutes = (baseDir) => {
     const items = fs.readdirSync(dir);
 
     for (const item of items) {
+      if (item === "error" || basePath.includes("error")) {
+        continue;
+      }
+
       const itemPath = path.join(dir, item);
       const stat = fs.statSync(itemPath);
 
