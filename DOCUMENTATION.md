@@ -116,12 +116,12 @@ npm test
 
 ### Content Structure
 
-Content is organized in folders within the `src/content/` directory. Each folder must contain an `index.md` file with content in markdown format.
+Content is organized in folders within the `content/` directory. Each folder must contain an `index.md` file with content in markdown format.
 
 Example:
 
 ```
-src/content/
+content/
 ├── about-page/
 │ └── index.md
 ├── blog/
@@ -137,7 +137,7 @@ src/content/
 
 To add a new page:
 
-1. Create a new folder in `src/content/` (or subfolder)
+1. Create a new folder in `content/` (or subfolder)
 2. Add an `index.md` file with content in markdown
 3. Access the corresponding URL (e.g., `/new-folder`)
 
