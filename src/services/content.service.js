@@ -9,7 +9,7 @@ const getTemplate = () => {
 const getContent = (contentPath) => {
   try {
     const markdownContent = fs.readFileSync(
-      path.join(__dirname, "..", "content", contentPath, "index.md"),
+      path.join(__dirname, "..", "..", "content", contentPath, "index.md"),
       "utf8"
     );
     return markdownConverter.convertToHtml(markdownContent);
