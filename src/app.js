@@ -15,6 +15,7 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         frameAncestors: ["*"],
+        imgSrc: ["'self'", "data:", "https:", "http:"],
       },
     },
   })
